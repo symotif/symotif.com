@@ -29,7 +29,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@playwright/test", "npm:1.33.0"],\
-            ["@sveltejs/adapter-auto", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:2.0.1"],\
             ["@sveltejs/adapter-static", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:2.0.2"],\
             ["@sveltejs/kit", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:1.16.3"],\
             ["@typescript-eslint/eslint-plugin", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:5.59.5"],\
@@ -484,29 +483,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@polka-url-npm-1.0.0-next.21-02342f3d90-c7654046d3.zip/node_modules/@polka/url/",\
           "packageDependencies": [\
             ["@polka/url", "npm:1.0.0-next.21"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@sveltejs/adapter-auto", [\
-        ["npm:2.0.1", {\
-          "packageLocation": "./.yarn/cache/@sveltejs-adapter-auto-npm-2.0.1-d7eb7d9726-b3318f44e8.zip/node_modules/@sveltejs/adapter-auto/",\
-          "packageDependencies": [\
-            ["@sveltejs/adapter-auto", "npm:2.0.1"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:2.0.1", {\
-          "packageLocation": "./.yarn/__virtual__/@sveltejs-adapter-auto-virtual-ceeab44bb9/0/cache/@sveltejs-adapter-auto-npm-2.0.1-d7eb7d9726-b3318f44e8.zip/node_modules/@sveltejs/adapter-auto/",\
-          "packageDependencies": [\
-            ["@sveltejs/adapter-auto", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:2.0.1"],\
-            ["@sveltejs/kit", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:1.16.3"],\
-            ["@types/sveltejs__kit", null],\
-            ["import-meta-resolve", "npm:3.0.0"]\
-          ],\
-          "packagePeers": [\
-            "@sveltejs/kit",\
-            "@types/sveltejs__kit"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2218,15 +2194,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["import-meta-resolve", [\
-        ["npm:3.0.0", {\
-          "packageLocation": "./.yarn/cache/import-meta-resolve-npm-3.0.0-bc7824116c-d0428cd149.zip/node_modules/import-meta-resolve/",\
-          "packageDependencies": [\
-            ["import-meta-resolve", "npm:3.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["imurmurhash", [\
         ["npm:0.1.4", {\
           "packageLocation": "./.yarn/cache/imurmurhash-npm-0.1.4-610c5068a0-7cae75c8cd.zip/node_modules/imurmurhash/",\
@@ -3890,7 +3857,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["symotif.com", "workspace:."],\
             ["@playwright/test", "npm:1.33.0"],\
-            ["@sveltejs/adapter-auto", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:2.0.1"],\
             ["@sveltejs/adapter-static", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:2.0.2"],\
             ["@sveltejs/kit", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:1.16.3"],\
             ["@typescript-eslint/eslint-plugin", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:5.59.5"],\

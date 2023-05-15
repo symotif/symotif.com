@@ -13,7 +13,7 @@ module.exports = {
         'gray-light': '#d3dce6',
       },
       fontFamily: {
-        sans: ['League Gothic', 'Mitr', 'PT Sans', 'sans-serif'],
+        sans: ['Prompt', 'Epilogue', 'Hind Siliguri', 'Fjalla One', 'Wix Madefor Display', 'Heebo', 'Epilogue', 'League Gothic', 'Mitr', 'PT Sans', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
       },
       extend: {
