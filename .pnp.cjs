@@ -30,6 +30,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@playwright/test", "npm:1.33.0"],\
             ["@sveltejs/adapter-auto", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:2.0.1"],\
+            ["@sveltejs/adapter-static", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:2.0.2"],\
             ["@sveltejs/kit", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:1.16.3"],\
             ["@typescript-eslint/eslint-plugin", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:5.59.5"],\
             ["@typescript-eslint/parser", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:5.59.5"],\
@@ -502,6 +503,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@sveltejs/kit", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:1.16.3"],\
             ["@types/sveltejs__kit", null],\
             ["import-meta-resolve", "npm:3.0.0"]\
+          ],\
+          "packagePeers": [\
+            "@sveltejs/kit",\
+            "@types/sveltejs__kit"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@sveltejs/adapter-static", [\
+        ["npm:2.0.2", {\
+          "packageLocation": "./.yarn/cache/@sveltejs-adapter-static-npm-2.0.2-58e20e192c-46473ad215.zip/node_modules/@sveltejs/adapter-static/",\
+          "packageDependencies": [\
+            ["@sveltejs/adapter-static", "npm:2.0.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:2.0.2", {\
+          "packageLocation": "./.yarn/__virtual__/@sveltejs-adapter-static-virtual-bfafd36681/0/cache/@sveltejs-adapter-static-npm-2.0.2-58e20e192c-46473ad215.zip/node_modules/@sveltejs/adapter-static/",\
+          "packageDependencies": [\
+            ["@sveltejs/adapter-static", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:2.0.2"],\
+            ["@sveltejs/kit", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:1.16.3"],\
+            ["@types/sveltejs__kit", null]\
           ],\
           "packagePeers": [\
             "@sveltejs/kit",\
@@ -3868,6 +3891,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["symotif.com", "workspace:."],\
             ["@playwright/test", "npm:1.33.0"],\
             ["@sveltejs/adapter-auto", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:2.0.1"],\
+            ["@sveltejs/adapter-static", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:2.0.2"],\
             ["@sveltejs/kit", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:1.16.3"],\
             ["@typescript-eslint/eslint-plugin", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:5.59.5"],\
             ["@typescript-eslint/parser", "virtual:cb835d147d1feef3f09ac580f50a9a2d86dbeba9c5200cef2e1f085cbc96fb155f03169c9fd1ffb557b071f1895dd946d9d675be93314fcd8b48238e46660018#npm:5.59.5"],\
