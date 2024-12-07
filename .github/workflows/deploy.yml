@@ -25,13 +25,13 @@ jobs:
         node-version: '10.9.0'  # Specify the Node.js version
 
     - name: Install dependencies
-      run: npm install  # Use npm install if package-lock.json is missing
+      run: yarn install
 
     - name: Build Svelte
-      run: npm run build
+      run: yarn build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build  # Adjust this path to match your output folder
+        publish_dir: build  # Adjust this path to match your output folder
