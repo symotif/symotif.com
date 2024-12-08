@@ -71,7 +71,7 @@
 <html lang="svelte">
 	<!-- <canvas id="bg"></canvas> -->
 	<!-- <canvas bind:this={canvas}></canvas> -->
-    <div class="scene" class:hover={isHovered}>
+    <div class="scene" class:is-hovered={isHovered}>
         <div class="logo">
             <h1 on:mouseover={() => isHovered = true}
 				on:mouseout={() => isHovered = false}>
@@ -124,19 +124,40 @@
 		);
 		background-size: 100% 100%;
         background-position: center;
-		animation: waveEffect 6s ease infinite;
+		animation: waveEffect 8s ease infinite;
     }
     
-	.scene:hover {
+	.scene.is-hovered {
 		animation: pulseEffect 2s ease infinite;
+	}
+
+	
+	h1 {
+		color: #ABD9AB;
+	}
+
+	.scene.is-hovered h1 {
+		color: #d5ecd5;
 	}
 
 	@keyframes waveEffect {
 		0% {
 			background-size: 100% 100%;
 		}
-		50% {
+		40% {
 			background-size: 700% 700%;
+		}
+		60% {
+			background-size: 125% 125%;
+		}
+		72% {
+			background-size: 150% 150%;
+		}
+		80% {
+			background-size: 100% 100%;
+		}
+		90% {
+			background-size: 175% 175%;
 		}
 		100% {
 			background-size: 100% 100%;
