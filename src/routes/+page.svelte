@@ -124,7 +124,7 @@
 		);
 		background-size: 100% 100%;
         background-position: center;
-		animation: waveEffect 8s ease infinite;
+		animation: waveEffect 10s ease infinite;
     }
     
 	.scene.is-hovered {
@@ -133,11 +133,11 @@
 
 	
 	h1 {
-		color: #ABD9AB;
+		color: #d5ecd5;
 	}
 
 	.scene.is-hovered h1 {
-		color: #d5ecd5;
+		color: #F1F9F1;
 	}
 
 	@keyframes waveEffect {
@@ -150,14 +150,14 @@
 		60% {
 			background-size: 125% 125%;
 		}
-		72% {
+		70% {
 			background-size: 150% 150%;
 		}
 		80% {
-			background-size: 100% 100%;
+			background-size: 125% 125%;
 		}
 		90% {
-			background-size: 175% 175%;
+			background-size: 150% 150%;
 		}
 		100% {
 			background-size: 100% 100%;
@@ -217,7 +217,7 @@
 	}
 
 	a:hover {
-		color: #90cd8e;
+		color: #F1F9F1;
 		text-decoration: none;
 		cursor: pointer;
 	}
