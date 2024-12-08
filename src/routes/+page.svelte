@@ -71,15 +71,21 @@
 <html lang="svelte">
 	<!-- <canvas id="bg"></canvas> -->
 	<!-- <canvas bind:this={canvas}></canvas> -->
-    <div class="scene" class:is-hovered={isHovered}>
-        <div class="logo">
-            <h1 on:mouseover={() => isHovered = true}
-				on:mouseout={() => isHovered = false}>
+	<div class="scene" class:is-hovered={isHovered}>
+		<div class="logo">
+			<h1
+				on:mouseover={() => (isHovered = true)}
+				on:focus={() => (isHovered = true)}
+				on:mouseout={() => (isHovered = false)}
+				on:blur={() => (isHovered = false)}
+				on:touchstart={() => (isHovered = true)}
+				on:touchend={() => (isHovered = false)}
+			>
 				symotif
 			</h1>
-    
-            <!-- symotif word -->
-            <!-- <svg width="500" height="500" viewBox="0 0 500 500">
+
+			<!-- symotif word -->
+			<!-- <svg width="500" height="500" viewBox="0 0 500 500">
                 <path id="curve" d="M 100,250 A 150,150 0 1,1 400,250" fill="transparent" />
                 <text>
                     <textPath xlink:href="#curve" startOffset="50%" text-anchor="middle">
@@ -87,33 +93,35 @@
                     </textPath>
                 </text>
             </svg> -->
-        </div>
-    
-        <footer>
-            <ul>
-                <li><a href="https://www.rchart.dev">rchart</a></li>
-                <li><a href="https://www.vejove.app">vejove</a></li>
-                <!-- <li><a href="#philosophy">Philosophy</a></li>
+		</div>
+
+		<footer>
+			<ul>
+				<li><a href="https://www.rchart.dev">rchart</a></li>
+				<li><a href="https://www.vejove.com">vejove</a></li>
+				<!-- <li><a href="#philosophy">Philosophy</a></li>
                 <li><a href="#contact">Contact</a></li> -->
-            </ul>
-            <p>&copy; 2024 Symotif, LLC</p>
-        </footer>
-    </div>
+			</ul>
+			<p>&copy; 2024 Symotif, LLC</p>
+		</footer>
+	</div>
 </html>
 
 <style lang="postcss">
-	/* :global(html) {
-        background-color: theme(colors.gray.100);
-    } */
+	:root {
+		--base-font-size: 1.5rem;
+		--bar-font-size: 4rem;
+		--logo-font-size: 5rem;
+	}
 	*,
 	html {
 		color: #d5ecd5;
-		font-family: "Kanit", sans-serif;
+		font-family: 'Kanit', sans-serif;
 		user-select: none;
-    }
-    
-    .scene {
-        margin: 0;
+	}
+
+	.scene {
+		margin: 0;
 		height: 100vh;
 		background: radial-gradient(
 			circle,
@@ -123,21 +131,24 @@
 			rgba(19, 42, 19, 1) 100%
 		);
 		background-size: 100% 100%;
-        background-position: center;
+		background-position: center;
 		animation: waveEffect 10s ease infinite;
-    }
-    
+	}
+
+	/* if the logo text is hovered */
 	.scene.is-hovered {
 		animation: pulseEffect 2s ease infinite;
 	}
 
-	
 	h1 {
 		color: #d5ecd5;
 	}
 
-	.scene.is-hovered h1 {
-		color: #F1F9F1;
+	.scene.is-hovered h1,
+	h1:active,
+	h1:focus,
+	h1:hover {
+		color: #f1f9f1;
 	}
 
 	@keyframes waveEffect {
@@ -182,10 +193,10 @@
 		left: 50%;
 		text-align: center;
 		transform: translate(-50%, -50%);
-		font-size: 5rem;
-        font-family: "Kanit", sans-serif;
-        font-weight: 400;
-        font-style: normal;
+		font-size: var(--logo-font-size);
+		font-family: 'Kanit', sans-serif;
+		font-weight: 400;
+		font-style: normal;
 	}
 
 	footer {
@@ -195,7 +206,7 @@
 	}
 
 	footer ul {
-		font-size: 4rem;
+		font-size: var(--bar-font-size);
 		list-style: none;
 		padding: 0;
 		display: flex;
@@ -217,7 +228,7 @@
 	}
 
 	a:hover {
-		color: #F1F9F1;
+		color: #f1f9f1;
 		text-decoration: none;
 		cursor: pointer;
 	}
@@ -227,6 +238,51 @@
 		margin: 0;
 		bottom: 3rem;
 		right: 3rem;
-		font-size: 1.5rem;
+		font-size: var(--base-font-size);
+	}
+
+	/* media queries for mobile */
+	@media (max-width: 1024px) {
+		:root {
+			--logo-font-size: 4rem;
+		}
+
+		footer ul {
+			font-size: 3rem;
+			gap: 2rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		:root {
+			--logo-font-size: 3rem;
+		}
+
+		.scene {
+			padding: 1rem;
+		}
+
+		footer ul {
+			font-size: 2.5rem;
+		}
+
+		footer p {
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		:root {
+			--logo-font-size: 2.5rem;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		footer ul {
+			flex-direction: column; /* Stack items vertically */
+			gap: 1rem;
+		}
 	}
 </style>
