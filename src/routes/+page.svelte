@@ -64,35 +64,41 @@
 	//     const material = new THREE.MeshStandardMaterial({ color: 0xaaaaaa, metalness: 1, roughness: 0.5 });
 	//     return new THREE.Mesh(geometry, material);
 	// }
+
+	let isHovered = false;
 </script>
 
 <html lang="svelte">
 	<!-- <canvas id="bg"></canvas> -->
 	<!-- <canvas bind:this={canvas}></canvas> -->
-
-	<div class="logo">
-		<h1>symotif</h1>
-
-		<!-- symotif word -->
-		<!-- <svg width="500" height="500" viewBox="0 0 500 500">
-            <path id="curve" d="M 100,250 A 150,150 0 1,1 400,250" fill="transparent" />
-            <text>
-                <textPath xlink:href="#curve" startOffset="50%" text-anchor="middle">
-                symotif
-                </textPath>
-            </text>
-        </svg> -->
-	</div>
-
-	<footer>
-		<ul>
-			<li><a href="https://www.rchart.dev">rchart</a></li>
-			<li><a href="https://www.vejove.app">vejove</a></li>
-			<!-- <li><a href="#philosophy">Philosophy</a></li>
-          <li><a href="#contact">Contact</a></li> -->
-		</ul>
-		<p>&copy; 2024 Symotif, LLC</p>
-	</footer>
+    <div class="scene" class:hover={isHovered}>
+        <div class="logo">
+            <h1 on:mouseover={() => isHovered = true}
+				on:mouseout={() => isHovered = false}>
+				symotif
+			</h1>
+    
+            <!-- symotif word -->
+            <!-- <svg width="500" height="500" viewBox="0 0 500 500">
+                <path id="curve" d="M 100,250 A 150,150 0 1,1 400,250" fill="transparent" />
+                <text>
+                    <textPath xlink:href="#curve" startOffset="50%" text-anchor="middle">
+                    symotif
+                    </textPath>
+                </text>
+            </svg> -->
+        </div>
+    
+        <footer>
+            <ul>
+                <li><a href="https://www.rchart.dev">rchart</a></li>
+                <li><a href="https://www.vejove.app">vejove</a></li>
+                <!-- <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#contact">Contact</a></li> -->
+            </ul>
+            <p>&copy; 2024 Symotif, LLC</p>
+        </footer>
+    </div>
 </html>
 
 <style lang="postcss">
@@ -102,6 +108,51 @@
 	*,
 	html {
 		color: #d5ecd5;
+		font-family: "Kanit", sans-serif;
+		user-select: none;
+    }
+    
+    .scene {
+        margin: 0;
+		height: 100vh;
+		background: radial-gradient(
+			circle,
+			rgba(38, 84, 38, 1) 0%,
+			rgba(128, 198, 128, 1) 40%,
+			rgba(38, 84, 38, 1) 80%,
+			rgba(19, 42, 19, 1) 100%
+		);
+		background-size: 100% 100%;
+        background-position: center;
+		animation: waveEffect 6s ease infinite;
+    }
+    
+	.scene:hover {
+		animation: pulseEffect 2s ease infinite;
+	}
+
+	@keyframes waveEffect {
+		0% {
+			background-size: 100% 100%;
+		}
+		50% {
+			background-size: 700% 700%;
+		}
+		100% {
+			background-size: 100% 100%;
+		}
+	}
+
+	@keyframes pulseEffect {
+		0% {
+			background-size: 100% 100%;
+		}
+		30% {
+			background-size: 150% 150%;
+		}
+		100% {
+			background-size: 100% 100%;
+		}
 	}
 
 	.logo {
@@ -110,30 +161,25 @@
 		left: 50%;
 		text-align: center;
 		transform: translate(-50%, -50%);
-		font-size: 3rem;
-        font-family: "Monoton", sans-serif;
+		font-size: 5rem;
+        font-family: "Kanit", sans-serif;
         font-weight: 400;
         font-style: normal;
 	}
-
-    .logo:hover {
-
-    }
 
 	footer {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1.5rem;
-		font-size: 1.2rem;
 	}
 
 	footer ul {
+		font-size: 4rem;
 		list-style: none;
 		padding: 0;
 		display: flex;
 		justify-content: center;
-		gap: 2rem;
+		gap: 3rem;
 		position: absolute;
 		margin: 0;
 		bottom: 3rem;
@@ -160,5 +206,6 @@
 		margin: 0;
 		bottom: 3rem;
 		right: 3rem;
+		font-size: 1.5rem;
 	}
 </style>
