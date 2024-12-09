@@ -72,6 +72,22 @@
 	<!-- <canvas id="bg"></canvas> -->
 	<!-- <canvas bind:this={canvas}></canvas> -->
 	<div class="scene" class:is-hovered={isHovered}>
+
+		<header>
+			<ul>
+				<!-- <li><a href="#mission">Mission</a></li>
+				<li><a href="#jobs">Jobs</a></li>
+                <li><a href="#contact">Contact</a></li> -->
+				<li><a href="https://github.com/symotif" target="_blank">
+					<img src="github.svg" alt="github"/></a>
+				</li>
+
+				<li><a href="https://x.com/symotifhealth" target="_blank">
+					<img src="x.svg" alt="x"/></a>
+				</li>
+			</ul>
+		</header>
+		
 		<div class="logo">
 			<h1
 				on:mouseover={() => (isHovered = true)}
@@ -99,8 +115,7 @@
 			<ul>
 				<li><a href="https://www.rchart.dev">rchart</a></li>
 				<li><a href="https://www.vejove.com">vejove</a></li>
-				<!-- <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#contact">Contact</a></li> -->
+				<li><a href="https://www.runthelist.app">runthelist</a></li>
 			</ul>
 			<p>&copy; 2024 Symotif, LLC</p>
 		</footer>
@@ -118,6 +133,10 @@
 		color: #d5ecd5;
 		font-family: 'Kanit', sans-serif;
 		user-select: none;
+	}
+
+	*::selection {
+		background-color: #9BD49B; /* Greenish highlight */
 	}
 
 	.scene {
@@ -239,6 +258,41 @@
 		bottom: 3rem;
 		right: 3rem;
 		font-size: var(--base-font-size);
+	}
+
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	header img {
+		fill: #d5ecd5;
+		width: var(--bar-font-size);
+		height: var(--bar-font-size);
+		color: #d5ecd5;
+	}
+
+	header ul {
+		font-size: var(--bar-font-size);
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		gap: 3rem;
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		top: 1rem;
+		right: 3rem;
+	}
+
+	header ul li {
+		display: inline;
+	}
+
+	header ul li a {
+		font-weight: bold;
+		transition: color 0.3s;
 	}
 
 	/* media queries for mobile */
