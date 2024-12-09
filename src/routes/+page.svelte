@@ -72,22 +72,23 @@
 	<!-- <canvas id="bg"></canvas> -->
 	<!-- <canvas bind:this={canvas}></canvas> -->
 	<div class="scene" class:is-hovered={isHovered}>
-
 		<header>
 			<ul>
 				<!-- <li><a href="#mission">Mission</a></li>
 				<li><a href="#jobs">Jobs</a></li>
                 <li><a href="#contact">Contact</a></li> -->
-				<li><a href="https://github.com/symotif" target="_blank">
-					<img src="github.svg" alt="github"/></a>
+				<li>
+					<a href="https://github.com/symotif" target="_blank">
+						<img src="github.svg" alt="github" /></a
+					>
 				</li>
 
-				<li><a href="https://x.com/symotifhealth" target="_blank">
-					<img src="x.svg" alt="x"/></a>
+				<li>
+					<a href="https://x.com/symotifhealth" target="_blank"> <img src="x.svg" alt="x" /></a>
 				</li>
 			</ul>
 		</header>
-		
+
 		<div class="logo">
 			<h1
 				on:mouseover={() => (isHovered = true)}
@@ -112,11 +113,14 @@
 		</div>
 
 		<footer>
-			<ul>
-				<li><a href="https://www.rchart.dev">rchart</a></li>
-				<li><a href="https://www.vejove.com">vejove</a></li>
-				<li><a href="https://www.runthelist.app">runthelist</a></li>
-			</ul>
+			<div class="flexing">
+				<ul>
+					<li><a href="https://www.rchart.dev">rchart</a></li>
+					<li><a href="https://www.vejove.com">vejove</a></li>
+					<li><a href="https://www.runthelist.app">runthelist</a></li>
+				</ul>
+			</div>
+
 			<p>&copy; 2024 Symotif, LLC</p>
 		</footer>
 	</div>
@@ -136,7 +140,7 @@
 	}
 
 	*::selection {
-		background-color: #9BD49B; /* Greenish highlight */
+		background-color: #9bd49b; /* Greenish highlight */
 	}
 
 	.scene {
@@ -267,10 +271,13 @@
 	}
 
 	header img {
-		fill: #d5ecd5;
 		width: var(--bar-font-size);
 		height: var(--bar-font-size);
-		color: #d5ecd5;
+		filter: invert(97%) sepia(4%) saturate(935%) hue-rotate(58deg) brightness(94%) contrast(96%);
+	}
+
+	header img:hover {
+		filter: invert(88%) sepia(2%) saturate(452%) hue-rotate(70deg) brightness(111%) contrast(97%);
 	}
 
 	header ul {
@@ -296,14 +303,28 @@
 	}
 
 	/* media queries for mobile */
-	@media (max-width: 1024px) {
+	@media (max-width: 1110px) {
 		:root {
 			--logo-font-size: 4rem;
 		}
 
 		footer ul {
 			font-size: 3rem;
-			gap: 2rem;
+			gap: 1rem;
+			flex-direction: column; /* Stack items vertically */
+			justify-content: center; /* Center vertically */
+			align-items: center; /* Center horizontally */
+			position: absolute;
+			bottom: 10rem;
+			left: 33%;
+		}
+
+		footer p {
+			font-size: 0.8rem; /* Make the font smaller */
+			position: absolute; /* Keep it fixed in the bottom-right */
+			bottom: 0.5rem;
+			right: 0.5rem;
+			margin: 0;
 		}
 	}
 
@@ -312,22 +333,22 @@
 			--logo-font-size: 3rem;
 		}
 
-		.scene {
-			padding: 1rem;
-		}
-
 		footer ul {
 			font-size: 2.5rem;
 		}
-
 		footer p {
-			font-size: 1rem;
+			font-size: 0.8rem; /* Make the font smaller */
+			position: absolute; /* Keep it fixed in the bottom-right */
+			bottom: 0.5rem;
+			right: 0.5rem;
+			margin: 0;
 		}
 	}
 
 	@media (max-width: 480px) {
 		:root {
 			--logo-font-size: 2.5rem;
+			--bar-font-size: 3rem;
 		}
 
 		h1 {
@@ -337,6 +358,32 @@
 		footer ul {
 			flex-direction: column; /* Stack items vertically */
 			gap: 1rem;
+			justify-content: center; /* Center vertically */
+			align-items: center; /* Center horizontally */
+			position: absolute;
+			bottom: 10rem;
+			left: 30%;
+		}
+
+		footer p {
+			font-size: 0.8rem; /* Make the font smaller */
+			position: absolute; /* Keep it fixed in the bottom-right */
+			bottom: 0.5rem;
+			right: 0.5rem;
+			margin: 0;
+		}
+
+		header ul {
+			flex-direction: row;
+			justify-content: center; /* Center icons horizontally */
+			gap: 1.5rem;
+			position: absolute;
+			top: 1.5rem;
+			left: 25%;
+		}
+
+		header {
+			justify-content: center;
 		}
 	}
 </style>
