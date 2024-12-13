@@ -322,13 +322,10 @@
 
 		footer ul {
 			font-size: 3rem;
-			gap: 1rem;
+			gap: 0rem;
 			flex-direction: column; /* Stack items vertically */
-			justify-content: center; /* Center vertically */
-			align-items: center; /* Center horizontally */
-			position: absolute;
-			bottom: 10rem;
-			left: 33%;
+			justify-content: left; /* Center vertically */
+			align-items: left; /* Center horizontally */
 		}
 
 		footer p {
@@ -346,7 +343,7 @@
 		}
 
 		footer ul {
-			font-size: 2.5rem;
+			font-size: 2rem;
 		}
 		footer p {
 			font-size: 0.8rem; /* Make the font smaller */
@@ -368,13 +365,7 @@
 		}
 
 		footer ul {
-			flex-direction: column; /* Stack items vertically */
-			gap: 1rem;
-			justify-content: center; /* Center vertically */
-			align-items: center; /* Center horizontally */
-			position: absolute;
-			bottom: 10rem;
-			left: 30%;
+			font-size: 1.5rem;
 		}
 
 		footer p {
@@ -391,7 +382,6 @@
 			gap: 1.5rem;
 			position: absolute;
 			top: 1.5rem;
-			left: 25%;
 		}
 
 		header {
