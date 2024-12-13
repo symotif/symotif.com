@@ -102,7 +102,7 @@
 				on:touchstart={() => (isHovered = true)}
 				on:touchend={() => (isHovered = false)}
 			>
-				symotif	
+				symotif
 			</h1>
 
 			<!-- symotif word -->
@@ -276,7 +276,7 @@
 
 	header .icon {
 		position: absolute;
-		top: 1rem;
+		top: 1.5rem;
 		left: 2rem;
 		width: var(--bar-font-size);
 		height: var(--bar-font-size);
@@ -386,6 +386,10 @@
 
 		header {
 			justify-content: center;
+		}
+
+		header .icon {
+			top: 2rem;
 		}
 	}
 </style>
