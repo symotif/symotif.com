@@ -73,6 +73,10 @@
 	<!-- <canvas bind:this={canvas}></canvas> -->
 	<div class="scene" class:is-hovered={isHovered}>
 		<header>
+			<div class="icon">
+				<img src="symotif.svg" alt="symotif" />
+			</div>
+
 			<ul>
 				<!-- <li><a href="#mission">Mission</a></li>
 				<li><a href="#jobs">Jobs</a></li>
@@ -98,7 +102,7 @@
 				on:touchstart={() => (isHovered = true)}
 				on:touchend={() => (isHovered = false)}
 			>
-				symotif
+				symotif	
 			</h1>
 
 			<!-- symotif word -->
@@ -270,13 +274,21 @@
 		justify-content: space-between;
 	}
 
-	header img {
+	header .icon {
+		position: absolute;
+		top: 1rem;
+		left: 2rem;
+		width: var(--bar-font-size);
+		height: var(--bar-font-size);
+	}
+
+	header ul img {
 		width: var(--bar-font-size);
 		height: var(--bar-font-size);
 		filter: invert(97%) sepia(4%) saturate(935%) hue-rotate(58deg) brightness(94%) contrast(96%);
 	}
 
-	header img:hover {
+	header ul img:hover {
 		filter: invert(88%) sepia(2%) saturate(452%) hue-rotate(70deg) brightness(111%) contrast(97%);
 	}
 
